@@ -1,0 +1,10 @@
+encryptionsalt: v1:JOYHBVmRloQ=:v1:gLKoCl1evwITpac2:OZicNFjWAxLbocr99OFjWH0ER7jJrg==
+config:
+  aws:accessKey:
+    secure: v1:plKYEvDdhph2NPNr:gEDE8k8djJSL3/mQ7WqqZa+a/6P//Q+aIsZ89YvmBN2pW2RF
+  aws:region: eu-central-1
+  aws:secretKey:
+    secure: v1:vPpI9nuDVd4wS4oc:u1mk3PAIFjhT8JQMDiab3fOCkjwe5aX7Fo7T7fbvIG0hpaZYuvjAyjC/DC2v+bSE4FPiZD1zSls=
+  photo:dbpass:
+    secure: v1:C1qWMY3x4gFZCGqk:jTPThseNnxq3zYAieqQhZcyL0WeK1VeDzeTZptxRzcErcLa7
+  photo:dbuser: photo
