@@ -92,14 +92,14 @@ services:
     environment:
       - PHP_TZ=Europe/Budapest
       - DB_CONNECTION=mysql
-      - DB_HOST=${pulumi.interpolate `rdsEndpoint`}
+      - DB_HOST=${rdsEndpoint.apply(val => `${val}`)}
       - DB_PORT=3306
       - DB_DATABASE=lychee
       - DB_USERNAME="${dbUser}"
-      - DB_PASSWORD=${pulumi.interpolate `dbPassword`}
+      - DB_PASSWORD=${dbPassword.apply(val => `${val}`)}
     restart: unless-stopped
 EOF
-
+sudo chown -R ec2-user:ec2-user -R /home/ec2-user
 docker-compose up -d
 `;
 const webserver = new aws.ec2.Instance("webserver",{
@@ -113,4 +113,3 @@ const webserver = new aws.ec2.Instance("webserver",{
 
 export const publicIp = webserver.publicIp;
 export const publicHostName = webserver.publicDns;
-//ami-00aa4671cbf840d82
